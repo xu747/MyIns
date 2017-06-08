@@ -64,18 +64,40 @@ class FollowersVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //通过indexPath获取用户所单击的单元格的用户对象
+        let cell = tableView.cellForRow(at: indexPath) as! FollowersCell
+        
+        //如果用户单击单元格，或者进入HomeVC或进入GuestVC
+        if cell.usernameLbl.text == AVUser.current()?.username{
+            let home = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            self.navigationController?.pushViewController(home, animated: true)
+        }else{
+            guestArray.append(followerArray[indexPath.row])
+            let guest = storyboard?.instantiateViewController(withIdentifier: "GuestVC") as! GuestVC
+            self.navigationController?.pushViewController(guest, animated: true)
+        }
+    }
+    
+    
+    
+    
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return followerArray.count
+    }
+
+    
 
     /*override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }*/
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return followerArray.count
-    }
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
