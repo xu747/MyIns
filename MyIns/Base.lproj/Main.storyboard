@@ -272,7 +272,7 @@
         <scene sceneID="1oi-gc-1Dr">
             <objects>
                 <collectionViewController storyboardIdentifier="HomeVC" id="HNP-SQ-1go" customClass="HomeVC" customModule="MyIns" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="XUO-xG-7gn">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XUO-xG-7gn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -402,7 +402,13 @@
                             <outlet property="delegate" destination="HNP-SQ-1go" id="Cg4-uf-0jf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ESi-b1-itf"/>
+                    <navigationItem key="navigationItem" id="ESi-b1-itf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="VyM-xP-Njd">
+                            <connections>
+                                <action selector="logout:" destination="HNP-SQ-1go" id="Hex-l4-6xH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFy-w2-lHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -489,7 +495,7 @@
         <scene sceneID="vry-FP-n10">
             <objects>
                 <collectionViewController storyboardIdentifier="GuestVC" id="t5H-9Y-yRe" customClass="GuestVC" customModule="MyIns" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="B8a-oy-59r">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="B8a-oy-59r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

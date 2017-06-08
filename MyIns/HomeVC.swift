@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 
-class HomeVC: UICollectionViewController {
+class HomeVC: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
     //刷新控件
     var refresher : UIRefreshControl!
@@ -230,6 +230,34 @@ class HomeVC: UICollectionViewController {
     
         return cell
     }
+    
+    //单击退出登录
+    @IBAction func logout(_ sender: AnyObject) {
+        //退出用户登录
+        AVUser.logOut()
+        
+        //从UserDefaults中移除用户登录记录
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.synchronize()
+        
+        //设置应用程序的rootViewController为登录控制器
+        let signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = signIn
+    }
+    
+    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        let size = CGSize(width: self.view.frame.width / 3, height:self.view.frame.width / 3)
+        return size
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 
     // MARK: UICollectionViewDelegate
 
