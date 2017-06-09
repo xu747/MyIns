@@ -19,13 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         let username:String?=UserDefaults.standard.string(forKey: "username")
         if username != nil{
-            /*AVUser.current()?.follow("59302b9b0ce4630057ec7f42") {(success:Bool,error:Error?) in
+            AVUser.current()?.follow("59302b9b0ce4630057ec7f42") {(success:Bool,error:Error?) in
                 if success{
                     print("为当前用户添加关注者成功")
                 }else{
                     print("为当前用户添加关注者失败")
                 }
-            }*/
+            }
             
             
  

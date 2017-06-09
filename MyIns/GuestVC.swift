@@ -35,7 +35,7 @@ class GuestVC: UICollectionViewController {
     func followersTap(_recognizer:UITapGestureRecognizer){
         //从故事版载入FollowersVC的视图
         let followers = self.storyboard?.instantiateViewController(withIdentifier: "FollowersVC") as! FollowersVC
-        followers.user = guestArray.last!.username!
+        followers.user = (guestArray.last!.username)!
         followers.show = "关 注 者"
         self.navigationController?.pushViewController(followers, animated: true)
     }
@@ -192,14 +192,14 @@ class GuestVC: UICollectionViewController {
         followeeQuery?.countObjectsInBackground({(count:Int,error:Error?) in
             guard error == nil else {print(error?.localizedDescription);return;}
             
-            /*if count == 0{
+            if count == 0{
                 header.button.setTitle("关 注", for: .normal)
                 header.button.backgroundColor = .lightGray
             }else{
-                //header.button.setTitle("√ 已关注", for: .normal)
-                //header.button.backgroundColor = .green
+                header.button.setTitle("√ 已关注", for: .normal)
+                header.button.backgroundColor = .green
                 
-            }*/
+            }
         })
         
 //计算统计数据
