@@ -17,6 +17,7 @@
 		7B6CA2BE1EE445F600AE1403 /* FollowersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CA2BD1EE445F600AE1403 /* FollowersVC.swift */; };
 		7B6CA2C01EE4462700AE1403 /* FollowersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CA2BF1EE4462700AE1403 /* FollowersCell.swift */; };
 		7B6CA2C21EE58FE300AE1403 /* GuestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CA2C11EE58FE300AE1403 /* GuestVC.swift */; };
+		7B77C4DB1EEAF77E0082EA68 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77C4DA1EEAF77E0082EA68 /* EditVC.swift */; };
 		7B85EF511EB2DDD900094FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B85EF501EB2DDD900094FAF /* AppDelegate.swift */; };
 		7B85EF561EB2DDD900094FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B85EF541EB2DDD900094FAF /* Main.storyboard */; };
 		7B85EF581EB2DDD900094FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B85EF571EB2DDD900094FAF /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		7B6CA2BD1EE445F600AE1403 /* FollowersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowersVC.swift; sourceTree = "<group>"; };
 		7B6CA2BF1EE4462700AE1403 /* FollowersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowersCell.swift; sourceTree = "<group>"; };
 		7B6CA2C11EE58FE300AE1403 /* GuestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestVC.swift; sourceTree = "<group>"; };
+		7B77C4DA1EEAF77E0082EA68 /* EditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
 		7B85EF4D1EB2DDD900094FAF /* MyIns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B85EF501EB2DDD900094FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B85EF551EB2DDD900094FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				7B6CA2BD1EE445F600AE1403 /* FollowersVC.swift */,
 				7B6CA2BF1EE4462700AE1403 /* FollowersCell.swift */,
 				7B6CA2C11EE58FE300AE1403 /* GuestVC.swift */,
+				7B77C4DA1EEAF77E0082EA68 /* EditVC.swift */,
 			);
 			path = MyIns;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B77C4DB1EEAF77E0082EA68 /* EditVC.swift in Sources */,
 				7B2B58E01EB2F8AF00B03631 /* SignUpVC.swift in Sources */,
 				7B43FB481ECE9B1500EB1081 /* Header View.swift in Sources */,
 				7B6CA2BE1EE445F600AE1403 /* FollowersVC.swift in Sources */,

@@ -88,6 +88,10 @@ class HomeVC: UICollectionViewController,UICollectionViewDelegateFlowLayout {
         refresher.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
         collectionView?.addSubview(refresher)
         
+        //从EditVC类接收Notification
+        NotificationCenter.default.addObserver(self, selector: #selector(reload(notification:)), name: NSNotification.Name(rawValue: "reload"), object: nil)
+        
+        
         loadPosts()
 
         // Uncomment the following line to preserve selection between presentations
@@ -122,7 +126,8 @@ class HomeVC: UICollectionViewController,UICollectionViewDelegateFlowLayout {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return picArray.count * 20
+        //return picArray.count * 20
+        return picArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind:String, at indexPath: IndexPath) -> UICollectionReusableView{
@@ -251,6 +256,9 @@ class HomeVC: UICollectionViewController,UICollectionViewDelegateFlowLayout {
         return size
     }
     
+    func reload (notification:Notification) {
+        collectionView?.reloadData()
+    }
     
     
     
